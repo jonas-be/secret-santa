@@ -4,14 +4,13 @@ import (
 	"fmt"
 	"math/rand"
 	"secret-santa/internals/config"
-	"secret-santa/internals/user"
 )
 
 type Processor struct {
 	Config *config.Config
 }
 
-var userMapping UserMap = make(map[user.User]user.User)
+var userMapping UserMap = make(map[config.User]config.User)
 
 func (processor Processor) Process() {
 	i := 0
@@ -27,7 +26,7 @@ func (processor Processor) Process() {
 }
 
 func (processor Processor) generateRandomMapping() {
-	userPool := make([]user.User, len(processor.Config.Users))
+	userPool := make([]config.User, len(processor.Config.Users))
 	copy(userPool, processor.Config.Users)
 
 	for _, u := range processor.Config.Users {

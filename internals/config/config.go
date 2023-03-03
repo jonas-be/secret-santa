@@ -3,12 +3,11 @@ package config
 import (
 	"gopkg.in/yaml.v2"
 	"os"
-	"secret-santa/internals/user"
 )
 
 type Config struct {
-	Users     []user.User `yaml:"users"`
-	ComboBans []ComboBan  `yaml:"forbiddenCombinations"`
+	Users     []User     `yaml:"users"`
+	ComboBans []ComboBan `yaml:"forbiddenCombinations"`
 }
 
 func LoadConfig(configPath string) (*Config, error) {

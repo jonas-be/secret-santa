@@ -2,10 +2,10 @@ package processor
 
 import (
 	"fmt"
-	"secret-santa/internals/user"
+	"secret-santa/internals/config"
 )
 
-type UserMap map[user.User]user.User
+type UserMap map[config.User]config.User
 
 func (userMap UserMap) String() string {
 	userMappingListString := ""
