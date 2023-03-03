@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	conf, err := config.LoadConfig("test.yaml")
+	conf, err := config.LoadConfig("config.yaml")
 	if err != nil {
 		fmt.Println(err)
 	}

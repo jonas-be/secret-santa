@@ -12,7 +12,7 @@ Secret-Santa is an application specifically designed to simplify the process of 
 2. Run application
 
 ### Configuration
-`test.yaml`
+`config.yaml`
 ```yaml
 users:    # Register Users
   - name: Clara
@@ -33,7 +33,7 @@ users:    # Register Users
 comboBans: # Write down permitted combinations 
   - combo: 
       - Max    # Max can never get Lena
-      - lena   # Lena can never get Max
+      - Lena   # Lena can never get Max
   - combo:
       - Jonas
       - jan
