@@ -16,19 +16,19 @@ Secret-Santa is an application specifically designed to simplify the process of 
 ```yaml
 users:    # Register Users
   - name: Clara
-    email: clara@family.example
+    email: clara@domain.example
   - name: Tom
-    email: tom@family.example
+    email: tom@domain.example
   - name: Jonas
-    email: jonas@family.example
+    email: jonas@domain.example
   - name: Max
-    email: max@family.example
+    email: max@domain.example
   - name: Lena
-    email: lena@family.example
+    email: lena@domain.example
   - name: Leo
-    email: leo@family.example
+    email: leo@domain.example
   - name: Jan
-    email: jan@family.example
+    email: jan@domain.example
     
 comboBans: # Write down permitted combinations 
   - combo: 
