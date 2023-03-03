@@ -1,0 +1,39 @@
+users:
+  - name: Steffi
+    email: steffi@family.example
+  - name: Thorsten
+    email: thorsten@family.example
+  - name: Olaf
+    email: olaf@family.example
+  - name: Pia
+    email: pia@family.example
+  - name: Sonja
+    email: sonja@family.example
+  - name: Armin
+    email: armin@family.example
+  - name: Clara
+    email: clara@family.example
+  - name: Tom
+    email: tom@family.example
+  - name: Jonas
+    email: jonas@family.example
+  - name: Max
+    email: max@family.example
+  - name: Lena
+    email: lena@family.example
+  - name: Dennis
+    email: dennis@family.example
+comboBans:
+  - combo:
+      - Steffi
+      - Thorsten
+  - combo:
+      - Olaf
+      - Pia
+  - combo:
+      - Lena
+      - Dennis
+  - combo:
+      - Sonja
+      - Armin
+      - Clara
