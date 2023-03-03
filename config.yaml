@@ -14,14 +14,14 @@ users: # Register Users
   - name: Jan
     email: jan@domain.example
 
-comboBans: # Write down permitted combinations
-  - combo:
+forbiddenCombinations: # Write down permitted combinations
+  - combination:
       - Max    # Max can never get Lena
       - Lena   # Lena can never get Max
-  - combo:
+  - combination:
       - Jonas
       - Jan
-  - combo:
+  - combination:
       - Clara # Clara can never get Leo or Tom
       - Leo
       - Tom

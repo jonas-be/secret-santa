@@ -22,7 +22,6 @@ func (processor Processor) Process() {
 			break
 		}
 	}
-	fmt.Printf(" + + + Result + + + \n\n")
 	fmt.Println(userMapping)
 	fmt.Printf("Succed after %v tries", i)
 }

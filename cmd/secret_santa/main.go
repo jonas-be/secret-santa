@@ -11,7 +11,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(conf)
 
 	processor := processor.Processor{Config: conf}
 	processor.Process()
