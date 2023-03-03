@@ -36,7 +36,7 @@ comboBans: # Write down permitted combinations
       - Lena   # Lena can never get Max
   - combo:
       - Jonas
-      - jan
+      - Jan
   - combo:
       - Clara # Clara can never get Leo or Tom
       - Leo
