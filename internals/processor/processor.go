@@ -22,7 +22,9 @@ func (processor Processor) Process() {
 		}
 	}
 	fmt.Println(userMapping)
-	fmt.Printf("Succed after %v tries", i)
+	fmt.Printf("Succed after %v tries\n", i)
+	fmt.Println("Sending mails...")
+	userMapping.sendMails(processor.Config.EmailConfig)
 }
 
 func (processor Processor) generateRandomMapping() {
