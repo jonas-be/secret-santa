@@ -1,18 +1,18 @@
 users: # Register Users
   - name: Clara
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
   - name: Tom
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
   - name: Jonas
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
   - name: Max
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
   - name: Lena
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
   - name: Leo
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
   - name: Jan
-    email: jonasbender2005@gmail.com
+    email: example@domain.example
 
 forbiddenCombinations: # Write down permitted combinations
   - combination:
