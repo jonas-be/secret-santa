@@ -31,7 +31,7 @@ users: # Register Users
   - name: Jan
     email: example@domain.example
 
-forbiddenCombinations: # Write down permitted combinations
+forbiddenCombinations: # Write down forbidden combinations
   - combination:
       - Max    # Max can never get Lena
       - Lena   # Lena can never get Max
@@ -43,7 +43,7 @@ forbiddenCombinations: # Write down permitted combinations
       - Leo
       - Tom
 emailConfig:
-  subject: SecretSanta 2020
+  subject: SecretSanta 2023
   content: Hi %v, your gift goes to %v  # The first %v is the mail receiver name and the second %v is the where the gift goes to
 ```
 
