@@ -4,34 +4,35 @@ Secret-Santa is an application specifically designed to simplify the process of 
 ## Features
 
  - [X] Rule sets
- - [ ] Send per Email _(coming soon)_
+ - [X] Send per Email
 
 ## Get started
 
 1. Setup Configuration file
-2. Run application
+2. Setup Env variables
+3. Run application
 
 ### Configuration
 `config.yaml`
 ```yaml
-users:    # Register Users
+users: # Register Users
   - name: Clara
-    email: clara@domain.example
+    email: jonasbender2005@gmail.com
   - name: Tom
-    email: tom@domain.example
+    email: jonasbender2005@gmail.com
   - name: Jonas
-    email: jonas@domain.example
+    email: jonasbender2005@gmail.com
   - name: Max
-    email: max@domain.example
+    email: jonasbender2005@gmail.com
   - name: Lena
-    email: lena@domain.example
+    email: jonasbender2005@gmail.com
   - name: Leo
-    email: leo@domain.example
+    email: jonasbender2005@gmail.com
   - name: Jan
-    email: jan@domain.example
-    
-forbiddenCombinations: # Write down permitted combinations 
-  - combination: 
+    email: jonasbender2005@gmail.com
+
+forbiddenCombinations: # Write down permitted combinations
+  - combination:
       - Max    # Max can never get Lena
       - Lena   # Lena can never get Max
   - combination:
@@ -41,4 +42,16 @@ forbiddenCombinations: # Write down permitted combinations
       - Clara # Clara can never get Leo or Tom
       - Leo
       - Tom
+emailConfig:
+  subject: SecretSanta 2020
+  content: Hi %v, your gift goes to %v  # The first %v is the mail receiver name and the second %v is the where the gift goes to
 ```
+
+### Env variables
+Set as environment variables, or write in a `.env` file
+````
+MAIL_SENDER=example@domain.example
+MAIL_PW=123
+MAIL_SMTP_SERVER=smtp.domain.example
+MAIL_SMTP_SERVER_PORT=587
+````

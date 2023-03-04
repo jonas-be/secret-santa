@@ -6,8 +6,9 @@ import (
 )
 
 type Config struct {
-	Users     []User     `yaml:"users"`
-	ComboBans []ComboBan `yaml:"forbiddenCombinations"`
+	EmailConfig EmailConfig `yaml:"emailConfig"`
+	Users       []User      `yaml:"users"`
+	ComboBans   []ComboBan  `yaml:"forbiddenCombinations"`
 }
 
 func LoadConfig(configPath string) (*Config, error) {
