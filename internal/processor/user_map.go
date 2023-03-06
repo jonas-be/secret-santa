@@ -2,8 +2,8 @@ package processor
 
 import (
 	"fmt"
-	"secret-santa/internals/config"
-	"secret-santa/internals/email"
+	"secret-santa/internal/config"
+	"secret-santa/internal/email"
 )
 
 type UserMap map[config.User]config.User

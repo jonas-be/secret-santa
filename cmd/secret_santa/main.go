@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/joho/godotenv"
 	"log"
-	"secret-santa/internals/config"
-	"secret-santa/internals/email"
-	"secret-santa/internals/processor"
+	"secret-santa/internal/config"
+	"secret-santa/internal/email"
+	"secret-santa/internal/processor"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package processor
 import (
 	"fmt"
 	"math/rand"
-	"secret-santa/internals/config"
+	"secret-santa/internal/config"
 )
 
 type Processor struct {
