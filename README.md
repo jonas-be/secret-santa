@@ -6,6 +6,11 @@ Secret-Santa is an application specifically designed to simplify the process of 
  - [X] Rule sets
  - [X] Send per Email
 
+## Installation
+
+You only need to download the binary for your OS, from the latest release.
+After extracting the ``zip`` or ``tar`` archive, you can use the binary.
+
 ## Get started
 
 1. Setup Configuration file
