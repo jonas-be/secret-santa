@@ -22,19 +22,19 @@ After extracting the ``zip`` or ``tar`` archive, you can use the binary.
 ```yaml
 users: # Register Users
   - name: Clara
-    email: example@domain.example
+    email: clara@domain.example
   - name: Tom
-    email: example@domain.example
+    email: tom@domain.example
   - name: Jonas
-    email: example@domain.example
+    email: jonas@domain.example
   - name: Max
-    email: example@domain.example
+    email: max@domain.example
   - name: Lena
-    email: example@domain.example
+    email: lena@domain.example
   - name: Leo
-    email: example@domain.example
+    email: leo@domain.example
   - name: Jan
-    email: example@domain.example
+    email: jan@domain.example
 
 forbiddenCombinations: # Write down forbidden combinations
   - combination:
@@ -53,6 +53,7 @@ emailConfig:
 ```
 
 ### Env variables
+Configure email credentails.
 Set as environment variables, or write in a `.env` file
 ````
 MAIL_SENDER=example@domain.example
