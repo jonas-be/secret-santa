@@ -25,6 +25,10 @@ forbiddenCombinations: # Write down forbidden combinations
       - Clara # Clara can never get Leo or Tom
       - Leo
       - Tom
+
+summaryEmail: example@domain.example
+
 emailConfig:
   subject: SecretSanta 2023
-  content: Hi %v, your gift goes to %v  # The first %v is the mail receiver name and the second %v is the where the gift goes to
+  content: Hi %v, your gift goes to %v # The first %v is the mail receiver name and the second %v is the name where the gift goes to
+
