@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"math/rand"
 	"secret-santa/internal/config"
+	"strings"
 )
 
 type Processor struct {
-	Config *config.Config
+	Config           *config.Config
+	AskBeforeSending bool
 }
 
 var userMapping UserMap = make(map[config.User]config.User)
@@ -22,6 +24,15 @@ func (processor Processor) Process() {
 		}
 	}
 	fmt.Printf("Succed after %v tries\n", i)
+	if processor.AskBeforeSending {
+		fmt.Printf("Summary:\n\n%v\n", userMapping.String())
+		fmt.Println("Send mails? (y/n)")
+		var input string
+		fmt.Scanln(&input)
+		if strings.ToLower(input) != "y" {
+			return
+		}
+	}
 	fmt.Println("Sending mails...")
 	userMapping.sendMails(processor.Config.EmailConfig, processor.Config.SummaryEmail)
 }

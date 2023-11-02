@@ -8,10 +8,36 @@ import (
 
 type UserMap map[config.User]config.User
 
+func (userMap UserMap) getLongetsName() int {
+	longestName := 0
+	for k := range userMap {
+		if len(k.Name) > longestName {
+			longestName = len(k.Name)
+		}
+	}
+	return longestName
+}
+
+func AddSpaces(s string, totalLen int) string {
+	for i := len(s); i < totalLen; i++ {
+		s += " "
+	}
+	return s
+}
+
 func (userMap UserMap) String() string {
+	maxLen := userMap.getLongetsName()*2 + 5
 	userMappingListString := ""
 	for k, v := range userMap {
-		userMappingListString += fmt.Sprintf("<p><b>%v => %v</b>   <i>(%v hat %v gezogen)</i></p>\n", k.Name, v.Name, k.Name, v.Name)
+		userMappingListString += fmt.Sprintf(" %v  (%v has drawn %v)\n", AddSpaces(fmt.Sprintf(" %v => %v", k.Name, v.Name), maxLen), k.Name, v.Name)
+	}
+	return userMappingListString
+}
+
+func (userMap UserMap) StringHTML() string {
+	userMappingListString := ""
+	for k, v := range userMap {
+		userMappingListString += fmt.Sprintf("<p><b>%v => %v</b>   <i>(%v has drawn %v)</i></p>\n", k.Name, v.Name, k.Name, v.Name)
 	}
 	return userMappingListString
 }
@@ -47,7 +73,7 @@ func (userMap UserMap) sendSummaryMail(conf config.EmailConfig, summaryMail stri
 		Receiver: summaryMail,
 		Content: email.Content{
 			Subject: conf.Subject + " | Summary",
-			Body:    userMap.String(),
+			Body:    userMap.StringHTML(),
 		},
 	}
 	err := mail.SendMail()
