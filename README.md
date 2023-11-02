@@ -59,6 +59,12 @@ emailConfig:
   content: Hi %v, your gift goes to %v # The first %v is the mail receiver name and the second %v is the name where the gift goes to
 ```
 
+### Flags
+| Flag   | Description          |
+|------- | -------------------- |
+| `y`    | Sends emails directly  |
+
+
 ### Env variables
 
 Configure email credentails.
